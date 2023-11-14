@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/style.css" rel="stylesheet">
+	<title>Приклад анімації</title>
+	<style type="text/css">
+	:root{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+	margin: auto;
+	}
+	* {
+		box-sizing: inherit;
+	}
+	figure {
+		width: 480px;
+		height: 360px;
+		border: 1px dashed black;
+		overflow: hidden;
+	}
+	figure img{
+		max-width: 100%;
+	}
+	figure figcaption{
+		font-size: 1.5em;
+		font-style: italic;
+		text-align: center;
+	}
+
+	figure:hover img{
+		animation: zoomIn;
+		animation-duration: 2s;
+	}
+
+	@keyframes zoomIn {
+	from{
+		transform: scale(1.0);
+	}
+	to{
+		transform: scale(1.8);
+	}
+}
+</style>
+</head>
+<body>
+	<figure>
+		<img src="https://gofromagazine.com/content/article/1463/picture-1463.jpg">
+		<figcaption>Хамелеон</figcaption>
+	</figure>
+</body>
+</html>
